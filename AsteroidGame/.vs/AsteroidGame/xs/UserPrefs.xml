@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{332C8CE4-BF2B-46C2-817B-BAAFF6A01A3E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AsteroidGame/AsteroidGame.iOS/Info.plist">
+    <Files>
+      <File FileName="AsteroidGame/AsteroidGame.iOS/Info.plist" />
+      <File FileName="AsteroidGame/AsteroidGame/App.xaml.cs" />
+      <File FileName="AsteroidGame/AsteroidGame.iOS/Main.cs" />
+      <File FileName="../../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
+      <File FileName="AsteroidGame/AsteroidGame.iOS/AppDelegate.cs" />
+      <File FileName="AsteroidGame/AsteroidGame.iOS/Entitlements.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AsteroidGame" expanded="True">
+            <Node name="AsteroidGame" expanded="True">
+              <Node name="View" expanded="True" />
+            </Node>
+            <Node name="AsteroidGame.iOS" expanded="True">
+              <Node name="Info.plist" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.ItemProperties.AsteroidGame.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008030-000A595A3EF9802E" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

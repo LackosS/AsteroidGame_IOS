@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:AsteroidGame.View;assembly=AsteroidGame"
+             BackgroundImageSource="{view:ImageResource AsteroidGame.Images.bg.jpeg}"
+             x:Class="AsteroidGame.View.SettingsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MainButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+    </ResourceDictionary>
+        </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Image="{view:ImageResource AsteroidGame.Images.load.png}" Style="{StaticResource MainButtonStyle}" Command="{Binding LoadGameCommand}"   />
+        <Button Image="{view:ImageResource AsteroidGame.Images.save.png}" Style="{StaticResource MainButtonStyle}" Command="{Binding SaveGameCommand}"   />
+        <Button Image="{view:ImageResource AsteroidGame.Images.return.png}" Style="{StaticResource MainButtonStyle}" Command="{Binding ReturnSCommand}"   />
+    </StackLayout>
+</ContentPage>

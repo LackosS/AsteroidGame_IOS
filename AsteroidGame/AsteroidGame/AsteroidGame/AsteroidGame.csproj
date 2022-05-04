@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Images" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\bg.jpeg" />
+      <EmbeddedResource Include="Images\bg.jpeg" />
+      <None Remove="Images\asteroid.png" />
+      <EmbeddedResource Include="Images\asteroid.png" />
+      <None Remove="Images\spaceship.png" />
+      <EmbeddedResource Include="Images\spaceship.png" />
+      <None Remove="Images\pause.png" />
+      <EmbeddedResource Include="Images\pause.png" />
+      <None Remove="Images\ico.png" />
+      <EmbeddedResource Include="Images\ico.png" />
+      <None Remove="Images\left.png" />
+      <EmbeddedResource Include="Images\left.png" />
+      <None Remove="Images\right.png" />
+      <EmbeddedResource Include="Images\right.png" />
+      <None Remove="Images\asteroids.png" />
+      <EmbeddedResource Include="Images\asteroids.png" />
+      <None Remove="Images\load.png" />
+      <EmbeddedResource Include="Images\load.png" />
+      <None Remove="Images\return.png" />
+      <EmbeddedResource Include="Images\return.png" />
+      <None Remove="Images\save.png" />
+      <EmbeddedResource Include="Images\save.png" />
+      <None Remove="Images\settings.png" />
+      <EmbeddedResource Include="Images\settings.png" />
+      <None Remove="Images\new.png" />
+      <EmbeddedResource Include="Images\new.png" />
+    </ItemGroup>
+</Project>

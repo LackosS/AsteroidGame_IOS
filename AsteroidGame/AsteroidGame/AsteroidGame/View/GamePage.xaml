@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:AsteroidGame.View"
+             xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="AsteroidGame.View.GamePage"
+             BackgroundImageSource="{view:ImageResource AsteroidGame.Images.bg.jpeg}"
+             Title="Asteroid Game">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MainLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="Margin" Value="1" />
+            </Style>
+            <Style x:Key="MainButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+            <Style x:Key="ControlButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+            <Style x:Key="FieldStyle" TargetType="ImageButton">
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Style.Triggers>
+                <DataTrigger TargetType="ImageButton" Binding="{Binding Images}" Value="2">
+                    <Setter Property="Source" Value="{view:ImageResource AsteroidGame.Images.asteroid.png}" />
+                </DataTrigger>
+                    <DataTrigger TargetType="ImageButton" Binding="{Binding Images}" Value="1">
+                        <Setter Property="Source" Value="{view:ImageResource AsteroidGame.Images.spaceship.png}" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="ImageButton" Binding="{Binding Images}" Value="0">
+                        <Setter Property="Source" Value="{view:ImageResource  }" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Left" Command="{Binding MoveLeftCommand}" />
+            <SwipeGestureRecognizer Direction="Right" Command="{Binding MoveRightCommand}" />
+        </Grid.GestureRecognizers>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Image="{view:ImageResource AsteroidGame.Images.pause.png}" Command="{Binding PauseCommand}" Style="{StaticResource MainButtonStyle}" Grid.Row="0" />
+        </StackLayout>
+        
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Image="{view:ImageResource AsteroidGame.Images.left.png}" Command="{Binding MoveLeftCommand}" Style="{StaticResource ControlButtonStyle}" Grid.Row="0" />
+            <Button Image="{view:ImageResource AsteroidGame.Images.right.png}" Command="{Binding MoveRightCommand}" Style="{StaticResource ControlButtonStyle}" Grid.Row="0" />
+        </StackLayout>
+        
+        <controls:FlowListView Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" FlowColumnCount="9" FlowItemsSource="{Binding Fields}" SeparatorVisibility="None">
+            <controls:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <ImageButton Style="{StaticResource FieldStyle}" VerticalOptions="Center" HorizontalOptions="Center" />
+                </DataTemplate>
+            </controls:FlowListView.FlowColumnTemplate>
+        </controls:FlowListView>
+    </Grid>
+</ContentPage>
